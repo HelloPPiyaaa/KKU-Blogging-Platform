@@ -1,0 +1,98 @@
+.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  a {
+    text-decoration: none;
+  }
+}
+.list-inline {
+  overflow: hidden;
+  li {
+    float: left;
+  }
+}
+
+.header {
+  margin-top: 17%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 28%;
+  background: #433e49;
+}
+.contain-setting {
+  margin-top: 17%;
+  position: fixed;
+  left: 28%;
+  top: 0;
+  bottom: 0;
+  width: 28%;
+  background: #433e49;
+}
+li {
+  color: #fff;
+  border-bottom: 0.5px solid #fff;
+  padding: 20px 30px;
+}
+
+li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+}
+div nav #sidebarSet:hover {
+  background-color: #f3e8eb;
+}
+/* div nav ul li a: {
+    color: #433e49;
+  } */
+.main-nav {
+  ul {
+    border-top: solid 1px gray;
+  }
+
+  li {
+    border-bottom: solid 1px gray;
+  }
+
+  a {
+    padding: 1.1em 0;
+    color: white;
+    font: 400 1.125em;
+    text-align: center;
+    transform: lowercase;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+.contain-setting {
+  margin-top: 15%;
+  position: fixed;
+  left: 28%;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  width: 72%;
+  background-color: white;
+}
+
+.manageAcc {
+  padding: 40px;
+}
+.btnChangpass,
+.btnDeleteAcc {
+  margin-top: 20px;
+  padding: 8px;
+  background-color: #433e49;
+  color: #fff;
+  border-radius: 12px;
+  border: #433e49;
+}
+#set1-input1,
+#set1-input2 {
+  width: 40%;
+}

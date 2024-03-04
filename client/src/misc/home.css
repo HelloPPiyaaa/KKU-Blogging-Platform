@@ -1,0 +1,15 @@
+.homepage img {
+  object-fit: cover;
+  height: 80vh;
+  overflow: hidden;
+}
+.homepage h1.right {
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  width: 45%;
+  transform: translate(-50%, -50%);
+}

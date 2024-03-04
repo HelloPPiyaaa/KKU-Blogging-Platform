@@ -1,0 +1,153 @@
+#navbar2 {
+  margin: 2rem 5rem 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#navbar2 .linka a {
+  text-decoration: none;
+  color: #433e49;
+}
+#navbar2 a:hover {
+  color: #e4bdc5;
+}
+
+#navbar2 .head1 h1 {
+  padding-left: 5rem;
+  color: #433e49;
+  font-size: 30px;
+  margin: 0;
+}
+
+#navbar2 .head1 h2 {
+  color: #433e49;
+  padding-left: 5rem;
+  font-size: 20px;
+  margin: 0;
+}
+.head1 {
+  flex: 1;
+}
+.linka a {
+  padding-right: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.linka {
+  padding-right: 5rem;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, white, #fff6f8);
+}
+
+.login-content {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-details {
+  flex: 1;
+  text-align: center;
+}
+
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* เพิ่มบรรทัดนี้เพื่อจัดให้ .form-fields อยู่ตรงกลางแนวนอน */
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #433e49;
+  border-radius: 15px;
+  max-width: 280px;
+}
+
+.form-fields {
+  width: 100%;
+  max-width: 280px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  align-self: center; /* เพิ่มบรรทัดนี้เพื่อให้ form-fields อยู่ตรงกลางของ .login-form */
+}
+
+.facebook-login {
+  border: 2px solid #433e49;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.facebook-icon {
+  color: #108cff;
+  height: 2em;
+  width: 2em;
+}
+
+.facebook-login .facebook-icon {
+  margin-right: 5px; /* ปรับระยะห่างทางด้านขวาของไอคอน */
+}
+.google-icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+.google-bt .google-icon {
+  margin-right: 5px;
+}
+.google-bt {
+  background: white;
+  border: 2px solid #433e49;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  width: 260px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.login-form h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 55px;
+}
+
+.lineor1 {
+  margin: 0;
+}
+
+.or2 {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 60%;
+}
+
+.line1 {
+  flex: 1;
+  height: 1px;
+  background-color: #000;
+  margin: 0 5px; /* ลดระยะห่างของเส้นและตัวหนังสือ 'or' */
+}
