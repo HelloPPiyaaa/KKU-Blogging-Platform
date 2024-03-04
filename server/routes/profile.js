@@ -42,7 +42,7 @@ router.post("/edit-profile/update/:id", async (req, res) => {
     };
 
     const updatedUser = await User.findByIdAndUpdate(req.params.id, {
-      new: true,
+      new: true, // ทำให้ใช้ข้อมูลที่อัปเดตล่าสุด
     });
 
     if (!updatedUser) {

@@ -176,7 +176,7 @@ const EditProfile: React.FC = () => {
                 <label
                   htmlFor="profile_picture"
                   className="input-group-text2"
-                  onClick={() => handleImageChange}
+                  onClick={() => handleImageChange1}
                 >
                   <IoCamera />
                 </label>
