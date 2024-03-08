@@ -2,9 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
+const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = 3001;
+
+app.use(bodyParser.json({ limit: "10mb" }));
+app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
 app.use(cors());
 app.use(express.json());
@@ -25,10 +29,6 @@ const profileRouter = require("./routes/profile");
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
 app.use("/profile", profileRouter);
-
-app.use("/edit-profile", express.static(path.join(__dirname, "edit-profile")));
-
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

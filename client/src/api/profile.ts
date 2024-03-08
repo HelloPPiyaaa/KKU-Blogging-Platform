@@ -119,35 +119,3 @@ export const deleteUserProfile = async (id: string): Promise<any> => {
     throw error;
   }
 };
-
-export const uploadFile = async (id: string, file: File) => {
-  const formData = new FormData();
-  formData.append("file", file);
-
-  try {
-    const response = await fetch(
-      `${API_BASE_URL}/profile/upload-profile-picture/${id}`,
-      {
-        method: "POST",
-        body: formData,
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`Error uploading file: ${response.statusText}`);
-    }
-
-    const contentType = response.headers.get("content-type");
-    if (contentType && contentType.includes("application/json")) {
-      const data = await response.json();
-      return data.success;
-    } else {
-      const responseData = await response.text();
-      console.log("Non-JSON response:", responseData);
-      return false;
-    }
-  } catch (error) {
-    console.error("Error uploading file:", error);
-    return false;
-  }
-};

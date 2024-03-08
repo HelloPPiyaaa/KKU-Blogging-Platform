@@ -2,40 +2,44 @@ const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
-    require: true,
+    required: true,
     unique: true,
   },
   email: {
     type: String,
-    require: true,
+    required: true,
     unique: true,
   },
   password: {
     type: String,
-    require: true,
+    required: true,
   },
   firstname: {
     type: String,
-    require: true, // ต้องมี
+    required: true, // ต้องมี
   },
   lastname: {
     type: String,
-    require: true, // ต้องมี
+    required: true, // ต้องมี
   },
   date_of_birth: {
     type: Date,
-    require: true, // ต้องมี
+    required: true, // ต้องมี
   },
   gender: {
     type: String,
-    require: true,
+    required: true,
   },
   tel: {
     type: String,
-    require: true, // ต้องมี
+    required: true, // ต้องมี
   },
-  profile_picture: String,
-  cover_pic: String,
+  profile_picture: {
+    type: String,
+  },
+  cover_pic: {
+    type: String,
+  },
   is_admin: {
     type: Boolean,
     default: false,

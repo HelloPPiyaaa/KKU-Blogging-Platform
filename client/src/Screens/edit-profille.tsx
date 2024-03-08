@@ -37,6 +37,8 @@ const EditProfile: React.FC = () => {
           setLastname(profileData.lastname);
           setDateOfBirth(profileData.date_of_birth);
           setGender(profileData.gender);
+          setCoverPic(profileData.coverPic);
+          setProfilePicture(profileData.profilePicture);
         }
       } catch (error) {
         console.error("Error fetching profile data:", error);
@@ -46,12 +48,32 @@ const EditProfile: React.FC = () => {
     fetchData();
   }, [id]);
 
+  const MAX_IMAGE_WIDTH = 800;
+
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
-      reader.onload = () => {
-        setCoverPic(reader.result);
+      reader.onload = (event) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          let width = img.width;
+          let height = img.height;
+          if (width > MAX_IMAGE_WIDTH) {
+            height *= MAX_IMAGE_WIDTH / width;
+            width = MAX_IMAGE_WIDTH;
+          }
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0, width, height);
+            const dataUrl = canvas.toDataURL("image/jpeg");
+            setCoverPic(dataUrl);
+          }
+        };
+        img.src = event.target?.result as string;
       };
       reader.readAsDataURL(file);
     }
@@ -61,8 +83,26 @@ const EditProfile: React.FC = () => {
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
-      reader.onload = () => {
-        setProfilePicture(reader.result);
+      reader.onload = (event) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          let width = img.width;
+          let height = img.height;
+          if (width > MAX_IMAGE_WIDTH) {
+            height *= MAX_IMAGE_WIDTH / width;
+            width = MAX_IMAGE_WIDTH;
+          }
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0, width, height);
+            const dataUrl = canvas.toDataURL("image/jpeg");
+            setProfilePicture(dataUrl);
+          }
+        };
+        img.src = event.target?.result as string;
       };
       reader.readAsDataURL(file);
     }
@@ -192,7 +232,14 @@ const EditProfile: React.FC = () => {
       >
         {userProfile && (
           <div>
-            <h2>{userProfile.firstname}</h2>
+            <div className="d-flex justify-content-center">
+              <h1 style={{ padding: "0 10px 0 10px" }}>
+                {userProfile.firstname}
+              </h1>
+              <h1 style={{ padding: "0 10px 0 10px" }}>
+                {userProfile.lastname}
+              </h1>
+            </div>
           </div>
         )}
       </div>
