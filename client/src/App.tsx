@@ -6,6 +6,7 @@ import TestPage from "./Screens/test";
 import HomePage from "./Screens/home";
 import Navbar from "./Navbar/Navbar1";
 import Profile from "./Screens/profile";
+import WritePost from "./Screens/post";
 import EditProfile from "./Screens/edit-profille";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/nav" element={<Navbar />} />
         <Route path="/test" element={<TestPage />} />
+        <Route path="/writepost" element={<WritePost />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/profile/edit-profile/:id" element={<EditProfile />} />
       </Routes>
