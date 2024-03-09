@@ -89,7 +89,7 @@ const Profile: React.FC = () => {
                 alt="Profile"
                 style={{
                   objectFit: "cover",
-                  border: "2px solid black",
+                  border: "5px solid white",
                   borderRadius: "200px",
                 }}
               />
@@ -112,7 +112,7 @@ const Profile: React.FC = () => {
                 {userProfile.lastname}
               </h1>
             </div>
-            <p>{userProfile.username}</p>
+            <p className="fw-bold fs-5">@{userProfile.username}</p>
           </div>
         )}
       </div>
@@ -120,7 +120,7 @@ const Profile: React.FC = () => {
         {userProfile && (
           <div className="follow-icon">
             <FaUserFriends />
-            <h3>{userProfile.following.length} following</h3>
+            <h5 className="m-0">{userProfile.following.length} following</h5>
           </div>
         )}
 
@@ -129,7 +129,7 @@ const Profile: React.FC = () => {
         {userProfile && (
           <div className="follow-icon">
             <FaUserFriends />
-            <h3>{userProfile.followers.length} followers</h3>
+            <h5 className="m-0">{userProfile.followers.length} followers</h5>
           </div>
         )}
       </div>

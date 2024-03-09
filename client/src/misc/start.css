@@ -4,14 +4,16 @@
   height: 100vh;
 }
 #navbar {
-  margin: 0 5rem 1rem 0;
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
   width: 100%;
-  z-index: 0;
-  padding-top: 5rem;
+  padding: 0 20px;
+  z-index: 2;
 }
 
 #navbar .linka a {
@@ -38,13 +40,15 @@
 .head1 {
   flex: 1;
 }
+.linka {
+  width: 220px;
+  display: flex;
+  justify-content: center;
+}
 .linka a {
-  padding-right: 40px;
   font-size: 18px;
   font-weight: bold;
-}
-.linka {
-  padding-right: 5rem;
+  padding: 5px;
 }
 .container {
   max-width: 700px;

@@ -39,6 +39,7 @@ router.post("/edit-profile/update/:id", async (req, res) => {
       new: true,
     });
     res.json(updatedUser);
+    profile_picture_url: updatedUser.profile_picture;
   } catch (error) {
     console.error("Error updating user profile:", error);
     res.status(500).send("Internal server error");

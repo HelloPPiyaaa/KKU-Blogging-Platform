@@ -39,7 +39,13 @@ button > svg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #f0f2f5;
+  background: #e4e6e9;
+}
+a.dropdown-item {
+  color: white;
+}
+.dropdown-item > svg {
+  margin-right: 8px;
 }
 .navbar-badge {
   position: absolute;

@@ -1,351 +1,191 @@
-/* First Level [Dropdown] elements (action when a:hover -> turn text to green color)*/
-nav > .container > div > ul > li > a:hover {
-  color: #433e49 !important;
-}
-/* First Level [Dropdown] elements (action when [#tags]li:hover)*/
-nav > .container > div > ul > li:hover {
-  border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border: 1px solid #f5f5f5;
-  border-bottom: none;
-  box-shadow: 2px 4px 18px #18181818;
-}
-
-nav > .container > div > ul > li:hover > a > i {
-  transition: 0.25s;
-  transform: rotate(180deg);
-}
-
-nav > .container > div > ul > li.active {
-  border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border: 1px solid #f5f5f5;
-  border-bottom: none;
-}
-
-/* Second Level [Dropdown] elements ([#tags]ul display)*/
-nav > .container > div > ul > li > ul {
-  display: none;
-  list-style: none;
-}
-
-nav > .container > div > ul > li:hover > ul > li:hover > a > i {
-  transition: 0.25s;
-  transform: rotate(180deg);
-}
-
-/* Second Level [Dropdown] elements ([#tags]ul display on first level on action hover)*/
-nav > .container > div > ul > li:hover > ul {
-  position: absolute;
-  display: block !important;
-  padding-left: 1em;
-  background-color: white;
-  border-radius: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border: 1px solid #f5f5f5;
-  box-shadow: 2px 4px 18px #18181818;
-}
-
-nav > .container > div > ul > li:hover > ul > li {
-  padding-right: 1em;
-}
-
-/* Second Level [Dropdown] elements ([#tags]A display on [#tags]a first level on action hover)*/
-nav > .container > div > ul > li:hover > ul > li > a {
-  text-decoration: none;
-  text-align: left;
-  display: inline-block;
-  padding: 0.25em 0;
-}
-
-/* Second Level [Dropdown] elements (action when a:hover -> turn text to green color)*/
-nav > .container > div > ul > li:hover > ul > li > a:hover {
-  color: #433e49 !important;
-}
-
-/* Third Level [Dropdown] elements ([#tags]ul display)*/
-nav > .container > div > ul > li > ul > li > ul {
-  display: none;
-  list-style: none;
-}
-
-/* Third Level [Dropdown] elements ([#tags]ul display when second level [#tags]li on action hover)*/
-nav > .container > div > ul > li > ul > li:hover > ul {
-  position: absolute;
-  display: inherit;
-  top: 1.95em;
-  background: white;
-  border-radius: 10px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  transform: translateX(10em);
-  padding: 0 1em;
-  padding-left: 1.5em;
-  border: 1px solid #f5f5f5;
-  box-shadow: 2px 4px 18px #18181818;
-  z-index: -1;
-}
-
-/* Third Level [Dropdown] elements ([#tags]a display when second level [#tags]li on action hover)*/
-nav > .container > div > ul > li > ul > li:hover > ul > li > a {
-  text-decoration: none;
-  text-align: left;
-  display: inline-block;
-  padding: 0.25em 0;
-}
-
-nav > .container > div > ul > li > ul > li:hover > ul > li > a:hover {
-  color: #433e49 !important;
-}
-
-header,
 #navbar {
-  transition: opacity 0.75s, visibility 0.75s;
-}
-.searchbutton {
-  border-radius: 15px;
-  background-color: white;
-  border: 2px solid #433e49;
-  height: 40px;
-  width: 80%; /* กำหนดความกว้างเป็น 80% ของพื้นที่ที่มี */
-  max-width: 550px;
-  margin: 0 20px 0 20px;
-  padding: 0 20px; /* ให้ส่วนขยายความกว้างของ search มีขนาดน้อยลง */
-}
-.iconAcc {
-  font-size: 40px;
-  color: #433e49;
-  height: 40px;
-}
-.dropdown-content {
-  position: absolute;
-  background-color: #433e49;
-  min-width: 150px; /* เปลี่ยนความกว้างของ Dropdown */
-  width: auto; /* ปรับขนาดความกว้างให้เพิ่มขึ้นตามเนื้อหา */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-radius: 5px;
-  padding: 15px;
-  right: 50px;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 10px 0; /* ปรับขนาด padding สำหรับแต่ละรายการใน Dropdown */
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-}
-
-.dropdown-content a:hover {
-  color: #e4bdc5;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.user-icon1,
-.setting-icon1,
-.stat-icon1,
-.help-icon1,
-.logout-icon1 {
-  font-size: 18px;
-  margin-right: 5px;
-}
-.searchform {
-  display: flex;
-  align-items: flex-end;
-  width: 550px;
-  justify-content: center; /* จัดกลางตามแนวนอน */
-}
-.iconPosta {
-  color: white;
-  font-size: 40px;
-}
-.iconChat,
-.iconNoti {
-  color: #433e49;
-  font-size: 40px;
-}
-.iconPost {
-  background: #433e49;
-  border-radius: 10px;
-  padding: 0 0.5em;
-  height: 40px;
-  color: white;
-  text-decoration: none;
-}
-.fadeout {
-  opacity: 0;
-  visibility: hidden;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar {
-  width: 0.5em;
-  height: 0.5em;
-  background-color: #f5f5f5;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #aeaeae;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #433e49;
-}
-
-* {
-  box-sizing: border-box;
-}
-.nav-menu li .user {
-  width: 56px;
-  padding-bottom: 0;
-}
-.nav-menu li {
-  padding: 0.5em;
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 10px;
-}
-.loader {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+#navbar .linka a {
+  text-decoration: none;
+  color: white;
+}
+#navbar a:hover {
+  color: #e4bdc5;
+}
+
+#navbar .head1 h1 {
+  padding-left: 5rem;
+  color: white;
+  font-size: 30px;
+  margin: 0;
+}
+
+#navbar .head1 h2 {
+  color: white;
+  padding-left: 5rem;
+  font-size: 20px;
+  margin: 0;
+}
+.head1 {
+  flex: 1;
+}
+.linka {
+  width: 220px;
+  display: flex;
   justify-content: center;
+}
+.linka a {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+}
+.container {
+  max-width: 700px;
+}
+.container h1 {
+  position: relative;
+  bottom: 300px;
+  position: fixed;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  padding: 1em 0 0 0;
+  margin-left: 10rem;
+  width: 800px; /* ปรับขนาดสูงสุดของข้อความ */
+}
+.imagestart {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 30vw; /* ความกว้างของ imagestart เป็น 30% ของ viewport width */
+  height: 30vh; /* ความสูงของ imagestart เป็น 30% ของ viewport height */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.start1 {
+  position: absolute;
+  border-radius: 400px 400px 0 0;
+  width: 80%; /* กำหนดความกว้างสำหรับ start1 */
+  max-width: 500px; /* ปรับขนาดสูงสุดของ start1 */
+  height: auto; /* ปรับความสูงอัตโนมัติ */
+}
+
+.start2 {
+  position: absolute;
+  border-radius: 400px 400px 0 0;
+  width: 80%; /* กำหนดความกว้างสำหรับ start2 */
+  max-width: 400px; /* ปรับขนาดสูงสุดของ start2 */
+  height: auto; /* ปรับความสูงอัตโนมัติ */
+  right: 150px;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.btn2 {
+  position: absolute;
+  bottom: 150px;
+  left: 160px;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 20px;
   background: white;
-  z-index: 99;
-  transition: opacity 0.75s, visibility 0.75s;
+  color: #344268;
 }
-
-.loader-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader::after {
-  content: "";
-  width: 60px;
-  height: 60px;
-  border: 12px solid #f1f0f0;
-  border-top-color: #433e49;
-  border-radius: 50%;
-  animation: loading 0.75s ease infinite;
-}
-
-@keyframes loading {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-@media screen and (max-width: 1140px) {
-  .overlay-col {
-    font-size: 3.75em;
-  }
-}
-/* Large */
-@media screen and (max-width: 960px) {
-  nav > .container > div > ul {
+@media screen and (width <= 768px) {
+  .start1,
+  .start2 {
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    order: initial;
     margin: 0;
     padding: 0;
   }
 
-  nav > .container > div > ul > li:hover {
-    border-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: 1px solid #f5f5f5;
+  button {
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  nav > .container > div > ul > li:hover > ul {
-    position: relative;
-    display: block !important;
-    padding: 0 1em;
-    background-color: white;
-    border-radius: 10px;
-    border-top-left-radius: 0;
-    border: 1px solid #f5f5f5;
-    box-shadow: 2px 4px 18px #18181818;
+  #navbar .linka {
+    display: none;
   }
 
-  nav > .container > div > ul > li > ul > li:hover > ul {
-    position: relative;
-    display: inherit;
-    top: 0em;
-    background: white;
-    border-radius: 10px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    transform: translateX(-1em);
-    padding: 0 1.2em;
-    border: none;
-    box-shadow: 2px 4px 18px #18181818;
-    z-index: 0;
-  }
-
-  nav > .container > div > ul > li:hover > ul > li > a > i {
-    transition: 0.25s;
-    transform: rotate(90deg);
-  }
-
-  nav > .container > div > ul > li:hover > ul > li:hover > a > i {
-    transition: 0.25s;
-    transform: rotate(270deg);
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav-menu {
+  .burger-menu {
     display: flex;
-    flex-direction: column; /* แสดงแนวคอลัมน์เมื่อขนาดหน้าจอเล็กกว่า 768px */
-    align-items: center; /* จัดกึ่งกลางตามแนวแกน X */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
   }
 
-  .nav-menu li {
-    width: 100%; /* กำหนดขนาดเต็มของหน้าจอ */
-    margin-bottom: 10px; /* ขยับระยะห่างระหว่างรายการเมนู */
-  }
-
-  .dropdownnav {
-    width: 100%;
-    text-align: center; /* จัดกึ่งกลางตามแนวแกน X */
-  }
-
-  .dropdown-content {
-    position: relative; /* ปรับตำแหน่งเพื่อให้เป็นตำแหน่งปกติในแนวตั้ง */
+  .burger-icon {
+    width: 30px;
+    height: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* จัดกึ่งกลางตามแนวแกน X */
-    width: 100%; /* กำหนดขนาดเต็มของหน้าจอ */
+    justify-content: space-between;
+    cursor: pointer;
   }
 
-  .dropdown-content a {
-    width: 100%; /* กำหนดขนาดเต็มของหน้าจอ */
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
   }
-}
-@media screen and (max-width: 1024px) {
-  h2.mb-0 {
-    font-size: 20px;
+
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  .searchform {
+
+  #burger-checkbox:checked + .menu-links {
     display: flex;
-    margin-bottom: 15px;
+  }
+
+  .menu-links a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 0;
+    text-align: center;
+  }
+
+  #burger-checkbox {
+    display: none;
+  }
+  .container h1 {
+    text-align: center;
+    font-size: 5vw;
+    padding: 1em 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .imagestart {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    justify-content: flex-end;
     align-items: flex-end;
-    width: fit-content;
-    justify-content: center;
   }
 }

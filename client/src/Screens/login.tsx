@@ -5,7 +5,6 @@ import "../misc/login.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
-import { Link } from "react-router-dom";
 import { BiLogoFacebookSquare } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import FacebookLogin, {
@@ -17,47 +16,8 @@ import { registerUser } from "../api/register";
 import { Row, Col } from "react-bootstrap";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
-
-function Navbar() {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  return (
-    <nav id="navbar2">
-      <div className="head1">
-        <h1>K K U</h1>
-        <h2>BLOGGING PLATFORM</h2>
-      </div>
-      <div className="linka">
-        <Link to="/login">เข้าสู่ระบบ</Link>
-        <a href="/register">สมัครใช้งาน</a>
-      </div>
-      <label
-        htmlFor="burger-checkbox"
-        className="burger-menu"
-        onClick={toggleMenu}
-      >
-        <div className="burger-icon">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
-        <input
-          type="checkbox"
-          id="burger-checkbox"
-          className="burger-checkbox"
-        />
-        <div className={`menu-links ${isActive ? "active" : ""}`}>
-          <Link to="login">เข้าสู่ระบบ</Link>
-          <a href="/register">สมัครใช้งาน</a>
-        </div>
-      </label>
-    </nav>
-  );
-}
+import Influe from "../pic/Influencer.png";
+import Navbar1 from "../Navbar/Navbar";
 
 const Login: React.FC = () => {
   const [tel] = useState("");
@@ -198,14 +158,15 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="login-container">
-      <Navbar />
+    <div className="login-container my-5">
+      <Navbar1 />
       <div className="login-content">
         <div className="user-details">
           <Image
-            src="https://atozenlife.com/wp-content/uploads/2021/02/minimalist-apartment-ideas-1.jpg"
+            src={Influe}
             alt="Apartment"
             fluid
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
         <div className="login-form">
@@ -217,9 +178,10 @@ const Login: React.FC = () => {
                   type="email"
                   placeholder="Enter email"
                   style={{
-                    maxWidth: "280px",
+                    width: "240px",
                     padding: "0.8em 1.2em",
                     borderRadius: "15px",
+                    border: "2px solid #433E49",
                   }}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -235,24 +197,27 @@ const Login: React.FC = () => {
                     maxWidth: "280px",
                     padding: "0.8em 1.2em",
                     borderRadius: "15px",
+                    border: "2px solid #433E49",
                   }}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Form.Group>
 
-              <Button
-                className="submit-button"
-                type="submit"
-                style={{
-                  backgroundColor: "#433E49",
-                  borderRadius: "15px",
-                  padding: "0.8em 1.2em",
-                }}
-                onClick={handleLogin}
-              >
-                Submit
-              </Button>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Button
+                  className="submit-button"
+                  type="submit"
+                  style={{
+                    backgroundColor: "#433E49",
+                    borderRadius: "15px",
+                    padding: "0.8em 1.2em",
+                  }}
+                  onClick={handleLogin}
+                >
+                  Submit
+                </Button>
+              </Form.Group>
             </div>
           </Form>
 
@@ -270,7 +235,7 @@ const Login: React.FC = () => {
                 fields="name,email,picture"
                 callback={responseFacebook}
                 cssClass="facebook-login"
-                textButton="สมัครใช้งานโดยบัญชี Facebook"
+                textButton="ใช้งานโดยบัญชี Facebook"
                 icon={<BiLogoFacebookSquare className="facebook-icon" />}
               />
             </Col>
@@ -279,7 +244,6 @@ const Login: React.FC = () => {
             <Col>
               <GoogleLogin
                 clientId="482979769066-iih3sviotimp52c5e7se1maifspaot0g.apps.googleusercontent.com"
-                buttonText="สมัครใช้งานโดยบัญชี Google"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
                 cookiePolicy="single_host_origin"
@@ -291,10 +255,17 @@ const Login: React.FC = () => {
                     className="google-bt"
                   >
                     <FcGoogle className="google-icon" />
-                    เข้าสู่ระบบผ่านบัญชี Google
+                    ใช้งานโดยบัญชี Google
                   </button>
                 )}
               />
+              <a
+                href="/"
+                className="d-flex text-center justify-content-center mt-2 fw-bold"
+                style={{ color: "#928590", fontSize: "13px" }}
+              >
+                เข้าสู่ระบบ Admin
+              </a>
             </Col>
           </Row>
         </div>

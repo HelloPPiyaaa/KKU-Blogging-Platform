@@ -20,87 +20,6 @@ h3 {
 #RGbutton:hover {
   background-color: #939495;
 }
-#navbar2 {
-  color: #fff;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#navbar2 .linka a {
-  text-decoration: none;
-  color: #433e49;
-}
-#navbar2 a:hover {
-  color: #e4bdc5;
-}
-
-#navbar2 .head1 h1 {
-  padding-left: 5rem;
-  color: #433e49;
-  font-size: 30px;
-  margin: 0;
-}
-
-#navbar2 .head1 h2 {
-  color: #433e49;
-  padding-left: 5rem;
-  font-size: 20px;
-  margin: 0;
-}
-.head1 {
-  flex: 1;
-}
-.linka a {
-  padding-right: 40px;
-  font-size: 18px;
-  font-weight: bold;
-}
-.linka {
-  padding-right: 5rem;
-}
-.container {
-  max-width: 700px;
-}
-.container h1 {
-  position: relative;
-  bottom: 300px;
-  position: fixed;
-  font-weight: bold;
-  font-size: 50px;
-  color: white;
-  padding: 1em 0 0 0;
-  margin-left: 10rem;
-  width: 800px; /* ปรับขนาดสูงสุดของข้อความ */
-}
-.imagestart {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 30vw; /* ความกว้างของ imagestart เป็น 30% ของ viewport width */
-  height: 30vh; /* ความสูงของ imagestart เป็น 30% ของ viewport height */
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.start1 {
-  position: absolute;
-  border-radius: 400px 400px 0 0;
-  width: 80%; /* กำหนดความกว้างสำหรับ start1 */
-  max-width: 500px; /* ปรับขนาดสูงสุดของ start1 */
-  height: auto; /* ปรับความสูงอัตโนมัติ */
-}
-
-.start2 {
-  position: absolute;
-  border-radius: 400px 400px 0 0;
-  width: 80%; /* กำหนดความกว้างสำหรับ start2 */
-  max-width: 400px; /* ปรับขนาดสูงสุดของ start2 */
-  height: auto; /* ปรับความสูงอัตโนมัติ */
-  right: 150px;
-}
 
 .burger-menu {
   display: none;
@@ -172,8 +91,8 @@ h3 {
 }
 .facebook-icon {
   color: #108cff;
-  height: 2em;
-  width: 2em;
+  height: 30px;
+  width: 30px;
 }
 .google-bt {
   background: white;
@@ -183,8 +102,8 @@ h3 {
   align-items: center;
 }
 .google-icon {
-  height: 1.9em;
-  width: 1.9em;
+  height: 30px;
+  width: 30px;
 }
 .lineor {
   padding: 0;
@@ -235,7 +154,7 @@ h3 {
   .bar {
     width: 100%;
     height: 3px;
-    background-color: #433e49;
+    background-color: white;
     border-radius: 3px;
   }
 
@@ -264,11 +183,5 @@ h3 {
 
   #burger-checkbox {
     display: none;
-  }
-  .container h1 {
-    font-size: 8vw; /* ใช้ viewport width เพื่อปรับขนาดตัวหนังสือให้ลดลงตามขนาดของหน้าจอ */
-    padding: 1em 0; /* ปรับการเรียงตำแหน่ง */
-    width: 90%; /* ให้ข้อความหัวข้อไม่ขยายเกินขอบจอ */
-    margin: 0 auto; /* จัดให้หัวข้ออยู่กึ่งกลางของหน้าจอ */
   }
 }

@@ -54,9 +54,17 @@ const Navbar2 = () => {
           <Dropdown
             show={showDropdown}
             onSelect={handleDropdownChange}
-            className="position-absolute p-4 z-3"
+            className="position-absolute z-3"
+            style={{
+              paddingTop: "2.8rem",
+              paddingLeft: "1rem",
+            }}
           >
-            <Dropdown.Menu>
+            <Dropdown.Menu
+              style={{
+                background: "#433E49",
+              }}
+            >
               <Dropdown.Item eventKey="option1">
                 <FaUser />
                 โปรไฟล์

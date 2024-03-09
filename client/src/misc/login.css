@@ -1,45 +1,3 @@
-#navbar2 {
-  margin: 2rem 5rem 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-#navbar2 .linka a {
-  text-decoration: none;
-  color: #433e49;
-}
-#navbar2 a:hover {
-  color: #e4bdc5;
-}
-
-#navbar2 .head1 h1 {
-  padding-left: 5rem;
-  color: #433e49;
-  font-size: 30px;
-  margin: 0;
-}
-
-#navbar2 .head1 h2 {
-  color: #433e49;
-  padding-left: 5rem;
-  font-size: 20px;
-  margin: 0;
-}
-.head1 {
-  flex: 1;
-}
-.linka a {
-  padding-right: 40px;
-  font-size: 18px;
-  font-weight: bold;
-}
-.linka {
-  padding-right: 5rem;
-}
 .login-container {
   display: flex;
   justify-content: center;
@@ -67,10 +25,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* เพิ่มบรรทัดนี้เพื่อจัดให้ .form-fields อยู่ตรงกลางแนวนอน */
+  align-items: center;
+  height: 500px;
 }
 
 .submit-button {
+  position: relative;
   width: 100%;
   background-color: #433e49;
   border-radius: 15px;
@@ -87,25 +47,29 @@
 
 .facebook-login {
   border: 2px solid #433e49;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   background: white;
   padding: 0.3rem;
   margin-bottom: 0.3rem;
+  width: 240px;
+  font-size: 13px;
+  font-weight: bold;
+  height: 52.8px;
 }
 .facebook-icon {
   color: #108cff;
-  height: 2em;
-  width: 2em;
+  height: 30px;
+  width: 30px;
 }
 
 .facebook-login .facebook-icon {
   margin-right: 5px; /* ปรับระยะห่างทางด้านขวาของไอคอน */
 }
 .google-icon {
-  height: 1.5em;
-  width: 1.5em;
+  height: 30px;
+  width: 30px;
 }
 .google-bt .google-icon {
   margin-right: 5px;
@@ -113,11 +77,14 @@
 .google-bt {
   background: white;
   border: 2px solid #433e49;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   padding: 0.3rem;
-  width: 260px;
+  width: 240px;
+  font-size: 13px;
+  font-weight: bold;
+  height: 52.8px;
 }
 
 .img-fluid {

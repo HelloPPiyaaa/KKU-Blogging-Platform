@@ -37,8 +37,8 @@ const EditProfile: React.FC = () => {
           setLastname(profileData.lastname);
           setDateOfBirth(profileData.date_of_birth);
           setGender(profileData.gender);
-          setCoverPic(profileData.coverPic);
-          setProfilePicture(profileData.profilePicture);
+          setCoverPic(profileData.cover_pic);
+          setProfilePicture(profileData.profile_picture);
         }
       } catch (error) {
         console.error("Error fetching profile data:", error);
@@ -145,19 +145,17 @@ const EditProfile: React.FC = () => {
           >
             <div>
               {coverPic && (
-                <div>
-                  <img
-                    className="d-block"
-                    src={coverPic.toString()}
-                    alt="Profile"
-                    style={{
-                      width: "100%",
-                      height: "59.8vh",
-                      objectFit: "cover",
-                      overflow: "hidden",
-                    }}
-                  />
-                </div>
+                <img
+                  className="d-block"
+                  src={coverPic.toString()}
+                  alt="Profile"
+                  style={{
+                    width: "100%",
+                    height: "59.8vh",
+                    objectFit: "cover",
+                    overflow: "hidden",
+                  }}
+                />
               )}
               <Form.Control
                 type="file"
@@ -183,27 +181,25 @@ const EditProfile: React.FC = () => {
               style={{
                 width: "230px",
                 height: "230px",
-                border: "2px solid black",
+                border: "5px solid white",
                 background: "white",
                 borderRadius: "200px",
               }}
             >
               {profilePicture && (
-                <div>
-                  <img
-                    className="d-block w-100"
-                    src={profilePicture.toString()}
-                    alt="Profile"
-                    style={{
-                      objectFit: "cover",
-                      overflow: "hidden",
-                      height: "227px",
-                      display: "flex",
-                      justifyContent: "center",
-                      borderRadius: "200px",
-                    }}
-                  />
-                </div>
+                <img
+                  className="d-block w-100"
+                  src={profilePicture.toString()}
+                  alt="Profile"
+                  style={{
+                    objectFit: "cover",
+                    overflow: "hidden",
+                    height: "227px",
+                    display: "flex",
+                    justifyContent: "center",
+                    borderRadius: "200px",
+                  }}
+                />
               )}
               <Form.Control
                 type="file"

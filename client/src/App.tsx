@@ -7,6 +7,8 @@ import HomePage from "./Screens/home";
 import Navbar from "./Navbar/Navbar1";
 import Profile from "./Screens/profile";
 import EditProfile from "./Screens/edit-profille";
+import StartAdmin from "./Screens/Admin/startAdmin";
+import RegisterAdmin from "./Screens/Admin/adminRegister";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path="/test" element={<TestPage />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/profile/edit-profile/:id" element={<EditProfile />} />
+
+        <Route path="/admin" element={<StartAdmin />} />
+        <Route path="/admin/register" element={<RegisterAdmin />} />
       </Routes>
     </Router>
   );

@@ -3,47 +3,7 @@ import "../misc/start.css";
 import cafeImage from "../pic/start1.jpg";
 import foodImage from "../pic/start2.jpg";
 import { Link } from "react-router-dom";
-
-function Navbar() {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  return (
-    <nav id="navbar">
-      <div className="head1">
-        <h1>K K U</h1>
-        <h2>BLOGGING PLATFORM</h2>
-      </div>
-      <div className="linka">
-        <Link to="login">เข้าสู่ระบบ</Link>
-        <a href="/register">สมัครใช้งาน</a>
-      </div>
-      <label
-        htmlFor="burger-checkbox"
-        className="burger-menu"
-        onClick={toggleMenu}
-      >
-        <div className="burger-icon">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
-        <input
-          type="checkbox"
-          id="burger-checkbox"
-          className="burger-checkbox"
-        />
-        <div className={`menu-links ${isActive ? "active" : ""}`}>
-          <Link to="login">เข้าสู่ระบบ</Link>
-          <Link to="regist">สมัครใช้งาน</Link>
-        </div>
-      </label>
-    </nav>
-  );
-}
+import Navbar from "../Navbar/Navbar";
 
 function StartPage() {
   return (
