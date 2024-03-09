@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import "../misc/";
-import Navbar1 from "../Navbar/Navbar";
+import "../misc/setting2.css";
+import Navbar2 from "../Navbar/Navbar1";
 // import { IoNotifications } from "react-icons/io5";
 // import { MdEmail } from "react-icons/md";
 // import { FaCommentAlt } from "react-icons/fa";
@@ -9,7 +9,7 @@ function Setting2() {
   return (
     <div>
       <div>
-        <Navbar1 />
+        <Navbar2 />
       </div>
 
       <header className="header" role="banner">
@@ -17,13 +17,13 @@ function Setting2() {
           <nav className="main-nav" role="navigation">
             <ul className="unstyled list-hover-slide">
               <li id="sidebarSet">
-                <a href="#">จัดการบัญชีผู้ใช้</a>
+                <a href="/setting1">จัดการบัญชีผู้ใช้</a>
               </li>
               <li id="sidebarSet">
-                <a href="#">การแจ้งเตือน</a>
+                <a href="/setting2">การแจ้งเตือน</a>
               </li>
               <li id="sidebarSet">
-                <a href="#">ความปลอดภัยและการเข้าสู่ระบบ</a>
+                <a href="/setting3">ความปลอดภัยและการเข้าสู่ระบบ</a>
               </li>
             </ul>
           </nav>
@@ -37,7 +37,7 @@ function Setting2() {
               <p id="qthelp1">
                 {/* <IoNotifications /> */}
                 การแจ้งเตือน{" "}
-                <label class="switch1">
+                <label className="switch1">
                   <input type="checkbox" /> <div></div>
                 </label>
               </p>
@@ -46,7 +46,7 @@ function Setting2() {
               <p id="qthelp2">
                 {/* <MdEmail /> */}
                 การแจ้งเตือนผ่านอีเมล
-                <label class="switch2">
+                <label className="switch2">
                   <input type="checkbox" /> <div></div>
                 </label>{" "}
               </p>
@@ -55,7 +55,7 @@ function Setting2() {
               <p id="qthelp3">
                 {/* <FaCommentAlt /> */}
                 การแสดงความคิดเห็นแบบ Moderate{" "}
-                <label class="switch4">
+                <label className="switch4">
                   <input type="checkbox" /> <div></div>
                 </label>
               </p>

@@ -5,7 +5,7 @@ import Navbar1 from "../Navbar/Navbar";
 // import { FcNext } from "react-icons/fc";
 // import Button from "react-bootstrap/Button";
 
-function TestPage() {
+function hPage() {
   return (
     <div className="help">
       <div className="nav-help">
@@ -15,14 +15,6 @@ function TestPage() {
         <div className="HeadSch">
           <h2>ศูนย์ช่วยเหลือ</h2>
           <h2>KKU Blogging Platform</h2>
-          <div className="search">
-            <input
-              type="text"
-              placeholder="ค้นหา..."
-              className="input-search"
-            />
-            <button className="btnsearchhelp">ค้นหา</button>
-          </div>
         </div>
       </Form>
       <div className="QT">
@@ -45,4 +37,4 @@ function TestPage() {
   );
 }
 
-export default TestPage;
+export default hPage;

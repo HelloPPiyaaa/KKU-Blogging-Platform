@@ -12,8 +12,7 @@
     float: left;
   }
 }
-
-.header {
+.nav-wrap {
   margin-top: 17%;
   position: fixed;
   left: 0;
@@ -43,7 +42,7 @@ li a {
   font-weight: 900;
 }
 div nav #sidebarSet:hover {
-  background-color: #f3e8eb;
+  background-color: rgb(211, 197, 197);
 }
 /* div nav ul li a: {
     color: #433e49;
@@ -70,7 +69,7 @@ div nav #sidebarSet:hover {
   }
 }
 .contain-setting {
-  margin-top: 15%;
+  /* margin-top: 15%; */
   position: fixed;
   left: 28%;
   right: auto;
@@ -95,4 +94,46 @@ div nav #sidebarSet:hover {
 #set1-input1,
 #set1-input2 {
   width: 40%;
+}
+.change-password-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.change-password-modal input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.change-password-modal button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+.newpassmodal {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.confirmnewpassmodal {
+  background-color: #dc3545;
+  color: #fff;
+}
+.button-container {
+  display: flex;
+  /* justify-content: space-between; */
 }

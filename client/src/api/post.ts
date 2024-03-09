@@ -1,7 +1,7 @@
 const API_BASE_URL = "http://localhost:3001";
 
 const Post = async (post: any): Promise<any> => {
-  const url = `${API_BASE_URL}/register`;
+  const url = `${API_BASE_URL}/post`;
   console.log("Request URL:", url);
 
   try {

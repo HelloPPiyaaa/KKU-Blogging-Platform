@@ -69,7 +69,7 @@ const Navbar2 = () => {
                 <ImStatsBars />
                 สถิติ
               </Dropdown.Item>
-              <Dropdown.Item eventKey="option4">
+              <Dropdown.Item eventKey="option4" href="/help">
                 <IoIosHelpCircle />
                 ช่วยเหลือ
               </Dropdown.Item>
