@@ -100,7 +100,7 @@ const Navbar2 = () => {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link className="link-dark" href="/tag">
-              แท็ก
+              หมวดหมู่
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>

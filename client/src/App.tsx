@@ -23,7 +23,6 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/nav" element={<Navbar />} />
         <Route path="/test" element={<TestPage />} />
-        <Route path="/test" element={<TestPage />} />
         <Route path="/writepost" element={<WritePost />} />
         <Route path="/setting1" element={<Setting />} />
         <Route path="/setting2" element={<Setting2 />} />
