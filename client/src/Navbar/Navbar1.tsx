@@ -11,6 +11,7 @@ import { IoMdSettings } from "react-icons/io";
 import { ImStatsBars } from "react-icons/im";
 import { IoIosHelpCircle } from "react-icons/io";
 import { IoIosLogOut } from "react-icons/io";
+import { MdOutlinePostAdd } from "react-icons/md";
 
 const Navbar2 = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -41,6 +42,9 @@ const Navbar2 = () => {
             <IoIosSearch />
           </button>
           <button className="icon-button">
+           <a href="/writepost" className="btn-writepost"><MdOutlinePostAdd /></a> 
+          </button>
+          <button className="icon-button">
             <BsChatHeart />
           </button>
 
@@ -57,7 +61,7 @@ const Navbar2 = () => {
             className="position-absolute p-4 z-3"
           >
             <Dropdown.Menu>
-              <Dropdown.Item eventKey="option1">
+              <Dropdown.Item eventKey="option1" href="/profile">
                 <FaUser />
                 โปรไฟล์
               </Dropdown.Item>

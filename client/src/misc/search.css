@@ -1,0 +1,77 @@
+form {
+    display: flex;
+    align-items: center; /* จัดให้รูปแบบภายใน form อยู่กึ่งกลางตามแนวดิ่ง */
+  }
+  
+  form input[type="text"] {
+    margin-right: 10px; /* เพิ่มระยะห่างด้านขวาของช่องข้อมูล "New Item" */
+  }
+  .search-con{
+padding-top: 100px;
+    height: 350px;
+    background: linear-gradient(45deg, #f2f3ea, #e9d8dc);
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+}
+.search-help{
+border: none;
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.addQT {
+    display: flex;
+    justify-content: flex-end; /* จัดให้ส่วนภายในชิดขวา */
+  }
+  
+  .addQT form {
+    display: flex;
+    align-items: center; /* จัดให้รูปแบบภายใน form อยู่กึ่งกลางตามแนวดิ่ง */
+  }
+  
+  .addQT form input[type="text"] {
+    margin-right: 10px; /* เพิ่มระยะห่างด้านขวาของช่องข้อมูล "New Item" */
+  }
+  .btnAddQT{
+    font-size: 50px;
+  }
+  .help-bottom ,.newQuestion{
+    padding: 0 5% 0 5%;
+ 
+  }
+  .inputQT{
+    border-radius: 15px;
+    border: gray 1px solid;
+    padding: 5px;
+    margin-right: 0;
+    font-size: 15px;
+  }
+  .help-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* จัดวางให้อยู่ในส่วนของซ้ายและขวา */
+  }
+  
+  .addQT,
+  .allqt {
+    display: flex;
+    align-items: center;
+  }
+  .newQuestion{
+    padding: 20px;
+   text-decoration: none;
+   color: grey;
+   margin: 15px 70px ;
+    border-radius: 20px;
+    border: 1px solid gray;
+
+  }
+  .newQuestion a {
+    color: grey;
+    text-decoration: none;
+
+margin: 20px;
+    font-size: 15px;
+  }
+  
+  

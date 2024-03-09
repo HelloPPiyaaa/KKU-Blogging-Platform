@@ -63,6 +63,7 @@ function Setting() {
         <div className="change-password-modal">
           <h4>เปลี่ยนรหัสผ่าน</h4>
           <div>
+          <input type="password" placeholder="รหัสผ่านเก่า"  />
             <input type="password" placeholder="รหัสผ่านใหม่" />
             <input type="password" placeholder="ยืนยันรหัสผ่านใหม่" />
             <div className="button-container">

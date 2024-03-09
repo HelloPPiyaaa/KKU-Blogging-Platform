@@ -10,6 +10,8 @@ import WritePost from "./Screens/post";
 import Setting from "./Screens/setting1";
 import Setting2 from "./Screens/setting2";
 import Setting3 from "./Screens/setting3";
+import Search from "./Screens/search";
+
 
 import EditProfile from "./Screens/edit-profille";
 
@@ -27,6 +29,7 @@ function App() {
         <Route path="/setting1" element={<Setting />} />
         <Route path="/setting2" element={<Setting2 />} />
         <Route path="/setting3" element={<Setting3 />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/profile/edit-profile/:id" element={<EditProfile />} />
       </Routes>

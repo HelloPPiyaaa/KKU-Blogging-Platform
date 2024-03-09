@@ -83,3 +83,12 @@ button > svg {
   display: flex;
   justify-content: center;
 }
+
+
+/* btn-writepost */
+.btn-writepost{
+  color: #3b3939;
+  font-size: 20px;
+  margin: 0;
+
+}
