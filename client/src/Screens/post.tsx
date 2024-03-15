@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import { createPost } from "../api/post"; // นำเข้าฟังก์ชัน Post จากไฟล์ api/test
 import "../misc/register.css"; // แนบ CSS สำหรับสไตล์
 
+
 // นำเข้ารูปภาพ
 import cafe from "../pic/sign.png";
 import lifestyle from "../pic/lifestyle.png";
@@ -50,6 +51,7 @@ function Writepost() {
       setTopic("");
       setContent("");
       setSelectedCategory("");
+      window.location.href = '/home';
     } catch (error) {
       console.error("Post failed:", error);
       alert("เกิดข้อผิดพลาดในการโพสต์บล็อก");
@@ -153,14 +155,15 @@ function Writepost() {
             />
           </div>
           <p>หมวดหมู่ที่เลือก: {selectedCategory}</p>
-
+          
           <div className="selectfile">
-            <input
-              type="file"
+          <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Default file input example</Form.Label>
+        <Form.Control type="file"
               accept="image/*"
               multiple
-              onChange={handleImageChange}
-            />
+              onChange={handleImageChange}/>
+      </Form.Group>
             {selectedImage && (
               <div>
                 <img
@@ -170,7 +173,7 @@ function Writepost() {
                 />
               </div>
             )}
-            {selectedFileName && <p>Selected file: {selectedFileName}</p>}
+            
           </div>
         </div>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
