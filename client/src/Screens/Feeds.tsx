@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 import { FiHeart } from "react-icons/fi";
 import { FaRegComment } from "react-icons/fa";
 import { PiShareFatBold } from "react-icons/pi";
-import Navbar2 from "../Navbar/Navbar1";
+
 
 const Feeds = () => {
   const navigate = useNavigate();
@@ -33,7 +33,6 @@ const Feeds = () => {
 
   return (
     <div className="container">
-      <Navbar2 />
       <Row xs={1} md={4} className="g-4">
         {feeds &&
           feeds.map((feed, idx) => (

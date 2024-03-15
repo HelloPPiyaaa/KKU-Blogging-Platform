@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav id="navbar">
-      <div className="head1">
+      <div className="head1" >
         <img
           src={logostart}
           alt=""

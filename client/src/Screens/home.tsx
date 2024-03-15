@@ -5,6 +5,7 @@ import excercise from "../pic/excercise.jpeg";
 import social from "../pic/social.jpg";
 import Carousel from "react-bootstrap/Carousel";
 import "../misc/home.css";
+import Feeds from "../Screens/Feeds";
 import { TbPlus } from "react-icons/tb";
 
 function HomePage() {
@@ -44,6 +45,7 @@ function HomePage() {
           <TbPlus />
         </a>
       </div>
+      <Feeds/>
     </div>
   );
 }

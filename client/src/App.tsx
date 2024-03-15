@@ -14,6 +14,11 @@ import Content from "./Screens/Content";
 import LoginAdmin from "./Screens/Admin/adminLogin";
 import AdminHome from "./Screens/Admin/adminHome";
 import Feeds from "./Screens/Feeds";
+import Setting from './Screens/setting1';
+import Setting2 from './Screens/setting2';
+import Setting3 from './Screens/setting3';
+import Sidebar from './Screens/sidebar';
+import Settingtest from './Screens/settingtest';
 
 function App() {
   return (
@@ -28,9 +33,13 @@ function App() {
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/profile/edit-profile/:id" element={<EditProfile />} />
         <Route path="/writepost" element={<Writepost />} />
+        <Route path='/setting1' element={<Setting />} />
+        <Route path='/setting2' element={<Setting2 />} />
+        <Route path='/setting3' element={<Setting3 />} />
+        <Route path='/sidebar' element={<Sidebar />} />
+        <Route path='/st' element={<Settingtest />} />
         <Route path="/content/:id" element={<Content />} />
         <Route path="/feeds" element={<Feeds />} />
-
         <Route path="/admin" element={<StartAdmin />} />
         <Route path="/admin/register" element={<RegisterAdmin />} />
         <Route path="/admin/login" element={<LoginAdmin />} />

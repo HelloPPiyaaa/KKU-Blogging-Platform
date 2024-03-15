@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import "../misc/setting2.css";
 import Navbar2 from "../Navbar/Navbar1";
+import Sidebar from "../Screens/sidebar";
 // import { IoNotifications } from "react-icons/io5";
 // import { MdEmail } from "react-icons/md";
 // import { FaCommentAlt } from "react-icons/fa";
@@ -9,26 +10,11 @@ function Setting2() {
   return (
     <div>
       <div>
-        <Navbar2 />
-      </div>
+      <Navbar2/>
+      <Sidebar/>
+    </div>
 
-      <header className="header" role="banner">
-        <div className="nav-wrap">
-          <nav className="main-nav" role="navigation">
-            <ul className="unstyled list-hover-slide">
-              <li id="sidebarSet">
-                <a href="/setting1">จัดการบัญชีผู้ใช้</a>
-              </li>
-              <li id="sidebarSet">
-                <a href="/setting2">การแจ้งเตือน</a>
-              </li>
-              <li id="sidebarSet">
-                <a href="/setting3">ความปลอดภัยและการเข้าสู่ระบบ</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      
       <Container className="contain-setting">
         <div className="manageAcc">
           <h4>จัดการบัญชีผู้ใช้</h4>

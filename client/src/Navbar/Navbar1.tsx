@@ -86,11 +86,11 @@ const Navbar2 = () => {
                   background: "#433E49",
                 }}
               >
-                <Dropdown.Item eventKey="option1">
+                <Dropdown.Item eventKey="option1" href="/profile/:id">
                   <PiUserCircleFill />
                   โปรไฟล์
                 </Dropdown.Item>
-                <Dropdown.Item eventKey="option2">
+                <Dropdown.Item eventKey="option2" href="/setting1">
                   <IoMdSettings />
                   ตั้งค่า
                 </Dropdown.Item>
@@ -98,11 +98,11 @@ const Navbar2 = () => {
                   <ImStatsBars />
                   สถิติ
                 </Dropdown.Item>
-                <Dropdown.Item eventKey="option4">
+                <Dropdown.Item eventKey="option4" href="/test">
                   <IoIosHelpCircle />
                   ช่วยเหลือ
                 </Dropdown.Item>
-                <Dropdown.Item eventKey="option5">
+                <Dropdown.Item eventKey="option5" href="/">
                   <IoIosLogOut />
                   ออกจากระบบ
                 </Dropdown.Item>

@@ -179,6 +179,7 @@ div nav #sidebarSet:hover {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+ 
 }
 
 /* Modal button styles */
@@ -217,3 +218,4 @@ div nav #sidebarSet:hover {
 .delete-confirmation-modal {
   animation: fadeIn 0.2s ease-in-out;
 }
+

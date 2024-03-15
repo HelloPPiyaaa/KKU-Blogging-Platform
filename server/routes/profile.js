@@ -60,4 +60,20 @@ router.delete("/edit-profile/delete/:id", async function (req, res, next) {
   }
 });
 
+router.post('/changepassword', async (req, res) => {
+  try {
+    const user = await User.findById(req.body._id);
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    user.password = req.body.password;
+    user.save();
+
+    res.json({ message: 'User deleted successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Error deleting user' });
+  }
+});
 module.exports = router;

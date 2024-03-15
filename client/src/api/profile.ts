@@ -125,3 +125,39 @@ export const deleteUserProfile = async (id: string): Promise<any> => {
     throw error;
   }
 };
+
+export const changePassword = async (data: any) => {
+  const url = `${API_BASE_URL}/profile/changepassword`;
+  console.log('Request URL:', url);
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      const statusText = response.statusText || 'Unknown Error';
+      throw new Error(
+        `Server returned ${response.status} ${statusText} for ${url}`
+      );
+    }
+
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    console.error('Error:', (error as Error).message);
+
+    if (error instanceof TypeError) {
+      console.error('Network error or CORS issue');
+    } else if (error instanceof SyntaxError) {
+      console.error('Error parsing JSON response');
+    }
+
+    throw error;
+  }
+};
+

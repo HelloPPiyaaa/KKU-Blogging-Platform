@@ -6,31 +6,17 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { RiGitRepositoryPrivateFill } from "react-icons/ri";
 import { FaGoogle } from "react-icons/fa";
 import Navbar2 from "../Navbar/Navbar1";
+import Sidebar from "../Screens/sidebar";
 
 function Setting2() {
   return (
     <div>
       <div>
         <Navbar2 />
+        <Sidebar />
       </div>
 
-      <header className="header" role="banner">
-        <div className="nav-wrap">
-          <nav className="main-nav" role="navigation">
-            <ul className="unstyled list-hover-slide">
-              <li id="sidebarSet">
-                <a href="/setting1">จัดการบัญชีผู้ใช้</a>
-              </li>
-              <li id="sidebarSet">
-                <a href="/setting2">การแจ้งเตือน</a>
-              </li>
-              <li id="sidebarSet">
-                <a href="/setting3">ความปลอดภัยและการเข้าสู่ระบบ</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+     
       <Container className="contain-setting">
         <div className="manageAcc">
           <h4>ความปลอดภัยและการเข้าสู่ระบบ</h4>
