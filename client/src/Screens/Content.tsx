@@ -10,7 +10,9 @@ import Col from "react-bootstrap/Col";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Navbar2 from "../Navbar/Navbar1";
-import { FiHeart } from "react-icons/fi";
+import { LuHeart } from "react-icons/lu";
+import { FaRegComment } from "react-icons/fa";
+import { MdOutlineBookmarkBorder } from "react-icons/md";
 
 const Content = () => {
   let { id } = useParams();
@@ -59,25 +61,25 @@ const Content = () => {
                   <h2>{post.topic}</h2>
                 </div>
                 <div className="category-con">
-                  {post.category === "cafe" && (
+                  {post.category === "คาเฟ่" && (
                     <Badge bg="info">{post.category}</Badge>
                   )}
-                  {post.category === "food" && (
+                  {post.category === "ร้านอาหาร" && (
                     <Badge bg="primary">{post.category}</Badge>
                   )}
-                  {post.category === "travel" && (
+                  {post.category === "ท่องเที่ยว" && (
                     <Badge bg="warning">{post.category}</Badge>
                   )}
-                  {post.category === "beauty" && (
+                  {post.category === "บิวตี้" && (
                     <Badge bg="light">{post.category}</Badge>
                   )}
-                  {post.category === "lifestyle" && (
+                  {post.category === "ไลฟ์สไตล์" && (
                     <Badge bg="success">{post.category}</Badge>
                   )}
-                  {post.category === "news" && (
+                  {post.category === "ข่าวสาร" && (
                     <Badge bg="danger">{post.category}</Badge>
                   )}
-                  {post.category === "other" && (
+                  {post.category === "อื่นๆ" && (
                     <Badge bg="secondary">{post.category}</Badge>
                   )}
                 </div>
@@ -87,14 +89,27 @@ const Content = () => {
                 {/* Like */}
                 <div className="btn-action">
                   <div className="icon-like">
-                    <FiHeart />
+                    <LuHeart />
                   </div>
                   <p className="likecount">254</p>
+                  <div className="icon-cm">
+                    <FaRegComment />
+                  </div>
+                  <p className="commentcount">42</p>
+
+               
+                    <div className="icon-save">
+                      <MdOutlineBookmarkBorder />
+                    </div>
+             
                 </div>
 
                 {/* Comment */}
                 <div className="comment-con">
-                  <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                  <FloatingLabel
+                    controlId="floatingTextarea2"
+                    label="แสดงความคิดเห็น"
+                  >
                     <Form.Control
                       as="textarea"
                       placeholder="Leave a comment here"

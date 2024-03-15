@@ -43,7 +43,8 @@ const Navbar2 = () => {
       <div className="navbarhead">
         <div className="navbar-badge">20+</div>
         <div className="navbar-end">
-          <img className="navbar-logo" src={logoKKU} alt="logo" />
+          <a href="/home"><img className="navbar-logo" src={logoKKU} alt="logo" /></a>
+          
         </div>
 
         <div className="navbar-center"></div>
@@ -129,8 +130,8 @@ const Navbar2 = () => {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link className="link-dark" href="/tag">
-              แท็ก
+            <Nav.Link className="link-dark" href="/category">
+              หมวดหมู่
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>

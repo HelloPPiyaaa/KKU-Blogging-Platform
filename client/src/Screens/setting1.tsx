@@ -5,14 +5,25 @@ import Navbar2 from "../Navbar/Navbar1";
 import { changePassword, deleteUserProfile } from "../api/profile";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../Screens/sidebar";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 const user = JSON.parse(localStorage.getItem("user") as string);
 
 function Setting() {
   const [password1, setPassword1] = useState("");
   const [password2, setPassword2] = useState("");
+  const [showChangePasswordModal, setShowChangePasswordModal] = useState(false);
+  const [showDeleteAccountModal, setShowDeleteAccountModal] = useState(false);
 
   const navigate = useNavigate();
+
+  const handleCloseChangePasswordModal = () =>
+    setShowChangePasswordModal(false);
+  const handleShowChangePasswordModal = () => setShowChangePasswordModal(true);
+
+  const handleCloseDeleteAccountModal = () => setShowDeleteAccountModal(false);
+  const handleShowDeleteAccountModal = () => setShowDeleteAccountModal(true);
 
   const handleChangePassword = async () => {
     if (password1 !== password2) {
@@ -23,7 +34,7 @@ function Setting() {
       await changePassword({ _id: user._id, password: password1 });
       navigate(`/home`);
     } catch (error) {
-      //
+      console.error(error);
     }
   };
 
@@ -36,6 +47,7 @@ function Setting() {
       console.error(error);
     }
   };
+
   return (
     <div>
       <div>
@@ -57,38 +69,95 @@ function Setting() {
             />
           </div>
 
-          <div className="form-outline mb-4">
-            <label className="form-label">รหัสผ่าน</label>
-            <input
-              type="password"
-              id="password1"
-              className="form-control"
-              value={password1}
-              onChange={(e) => setPassword1(e.target.value)}
-              style={{ width: '350px' }}
-            />
-          </div>
-          <div className="form-outline mb-4">
-            <label className="form-label">ยืนยันรหัสผ่าน</label>
-            <input
-              type="password"
-              id="password2"
-              className="form-control"
-              value={password2}
-              onChange={(e) => setPassword2(e.target.value)}
-              style={{ width: '350px' }}
-            />
-          </div>
-          <button className="btnDeleteAcc" onClick={handleChangePassword}>
+          <Button
+            style={{ backgroundColor: "#433e49", border: "none" }}
+            onClick={handleShowChangePasswordModal}
+          >
             เปลี่ยนรหัสผ่าน
-          </button>
+          </Button>
+          <Modal
+            show={showChangePasswordModal}
+            onHide={handleCloseChangePasswordModal}
+            backdrop="static"
+            keyboard={false}
+            centered
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>เปลี่ยนรหัสผ่าน</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <div className="form-outline mb-4">
+                <label className="form-label">รหัสผ่านใหม่</label>
+                <input
+                  type="password"
+                  id="password1"
+                  className="form-control"
+                  value={password1}
+                  onChange={(e) => setPassword1(e.target.value)}
+                  style={{ width: "350px" }}
+                />
+              </div>
+              <div className="form-outline mb-4">
+                <label className="form-label">ยืนยันรหัสผ่านใหม่</label>
+                <input
+                  type="password"
+                  id="password2"
+                  className="form-control"
+                  value={password2}
+                  onChange={(e) => setPassword2(e.target.value)}
+                  style={{ width: "350px" }}
+                />
+              </div>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button
+                variant="secondary"
+                onClick={handleCloseChangePasswordModal}
+              >
+                ปิด
+              </Button>
+              <Button
+                style={{ backgroundColor: "#433e49", border: "none" }}
+                onClick={handleChangePassword}
+              >
+                ยืนยัน
+              </Button>
+            </Modal.Footer>
+          </Modal>
 
           <div className="deleteAcc">
             <h4>ลบบัญชีผู้ใช้</h4>
             <p>ลบบัญชีของคุณและข้อมูลบัญชีของคุณ</p>
-            <button className="btnDeleteAcc" onClick={handleDeleteAccount}>
+
+            <Button variant="danger" onClick={handleShowDeleteAccountModal}>
               ลบบัญชีผู้ใช้
-            </button>
+            </Button>
+
+            <Modal
+              show={showDeleteAccountModal}
+              onHide={handleCloseDeleteAccountModal}
+              backdrop="static"
+              keyboard={false}
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title>ลบบัญชีผู้ใช้</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีผู้ใช้ของคุณและข้อมูลบัญชีของคุณ
+              </Modal.Body>
+              <Modal.Footer>
+                <Button
+                  variant="secondary"
+                  onClick={handleCloseDeleteAccountModal}
+                >
+                  ยกเลิก
+                </Button>
+                <Button variant="danger" onClick={handleDeleteAccount}>
+                  ลบบัญชี
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </div>
         </div>
       </Container>

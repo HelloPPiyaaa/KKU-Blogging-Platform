@@ -5,10 +5,10 @@ import { Card, Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "react-bootstrap";
 import dayjs from "dayjs";
-import { FiHeart } from "react-icons/fi";
+import { LuHeart } from "react-icons/lu";
 import { FaRegComment } from "react-icons/fa";
-import { PiShareFatBold } from "react-icons/pi";
-
+import { MdOutlineBookmarkBorder } from "react-icons/md";
+import "../misc/feeds.css";
 
 const Feeds = () => {
   const navigate = useNavigate();
@@ -102,15 +102,18 @@ const Feeds = () => {
                     {/* Like */}
                     <div className="btn-action">
                       <div className="icon-like">
-                        <FiHeart />
+                      <LuHeart />
                       </div>
                       <p className="likecount">254</p>
                       <div className="icon-cm">
                         <FaRegComment />
                       </div>
                       <p className="commentcount">42</p>
-                      <div className="icon-share">
-                        <PiShareFatBold />
+                      
+                      <div className="save">
+                        <div className="icon-save">
+                        <MdOutlineBookmarkBorder />
+                        </div>
                       </div>
                     </div>
                   </Card.Body>

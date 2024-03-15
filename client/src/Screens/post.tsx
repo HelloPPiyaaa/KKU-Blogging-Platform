@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Navbar2 from "../Navbar/Navbar1";
 import "../misc/wp.css";
 import Row from "react-bootstrap/Row";
@@ -6,7 +7,6 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import { createPost } from "../api/post"; // นำเข้าฟังก์ชัน Post จากไฟล์ api/test
 import "../misc/register.css"; // แนบ CSS สำหรับสไตล์
-
 
 // นำเข้ารูปภาพ
 import cafe from "../pic/sign.png";
@@ -51,7 +51,7 @@ function Writepost() {
       setTopic("");
       setContent("");
       setSelectedCategory("");
-      window.location.href = '/home';
+      window.location.href = "/home";
     } catch (error) {
       console.error("Post failed:", error);
       alert("เกิดข้อผิดพลาดในการโพสต์บล็อก");
@@ -87,6 +87,7 @@ function Writepost() {
         <Navbar2 />
       </div>
       <div className="wp">
+
         <Row>
           <Col>
             <Form.Label htmlFor="inputTopic">หัวข้อ</Form.Label>
@@ -95,7 +96,6 @@ function Writepost() {
               id="inputTopic"
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              placeholder="ใส่ได้ไม่เกิน 50 ตัวอักษร"
               maxLength={50} // จำกัดจำนวนตัวอักษรที่ป้อน
             />
           </Col>
@@ -108,62 +108,66 @@ function Writepost() {
             <img
               src={cafe}
               alt="cafeType"
-              onClick={() => handleCategorySelection("cafe")}
-              className={selectedCategory === "cafe" ? "selected" : ""}
+              onClick={() => handleCategorySelection("คาเฟ่")}
+              className={selectedCategory === "คาเฟ่" ? "selected" : ""}
             />
             <img
               src={food}
               alt="foodType"
-              onClick={() => handleCategorySelection("food")}
-              className={selectedCategory === "food" ? "selected" : ""}
+              onClick={() => handleCategorySelection("ร้านอาหาร")}
+              className={selectedCategory === "ร้านอาหาร" ? "selected" : ""}
             />
             <img
               src={fashion}
               alt="fashionType"
-              onClick={() => handleCategorySelection("fashion")}
-              className={selectedCategory === "fashion" ? "selected" : ""}
+              onClick={() => handleCategorySelection("แฟชั่น")}
+              className={selectedCategory === "แฟชั่น" ? "selected" : ""}
             />
             <img
               src={travel}
               alt="travelType"
-              onClick={() => handleCategorySelection("travel")}
-              className={selectedCategory === "travel" ? "selected" : ""}
+              onClick={() => handleCategorySelection("ท่องเที่ยว")}
+              className={selectedCategory === "ท่องเที่ยว" ? "selected" : ""}
             />
             <img
               src={beauty}
               alt="beautyType"
-              onClick={() => handleCategorySelection("beauty")}
-              className={selectedCategory === "beauty" ? "selected" : ""}
+              onClick={() => handleCategorySelection("บิวตี้")}
+              className={selectedCategory === "บิวตี้" ? "selected" : ""}
             />
             <img
               src={lifestyle}
               alt="lifestyleType"
-              onClick={() => handleCategorySelection("lifestyle")}
-              className={selectedCategory === "lifestyle" ? "selected" : ""}
+              onClick={() => handleCategorySelection("ไลฟ์สไตล์")}
+              className={selectedCategory === "ไลฟ์สไตล์" ? "selected" : ""}
             />
             <img
               src={news}
               alt="newsType"
-              onClick={() => handleCategorySelection("news")}
-              className={selectedCategory === "news" ? "selected" : ""}
+              onClick={() => handleCategorySelection("ข่าวสาร")}
+              className={selectedCategory === "ข่าวสาร" ? "selected" : ""}
             />
             <img
               src={other}
               alt="otherType"
-              onClick={() => handleCategorySelection("other")}
-              className={selectedCategory === "other" ? "selected" : ""}
+              onClick={() => handleCategorySelection("อื่นๆ")}
+              className={selectedCategory === "อื่นๆ" ? "selected" : ""}
             />
           </div>
           <p>หมวดหมู่ที่เลือก: {selectedCategory}</p>
-          
+
           <div className="selectfile">
-          <Form.Group controlId="formFile" className="mb-3">
-        <Form.Label>Default file input example</Form.Label>
-        <Form.Control type="file"
-              accept="image/*"
-              multiple
-              onChange={handleImageChange}/>
-      </Form.Group>
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>
+                <i className="fas fa-image"></i> เพิ่มรูปภาพ
+              </Form.Label>
+              <Form.Control
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={handleImageChange}
+              />
+            </Form.Group>
             {selectedImage && (
               <div>
                 <img
@@ -173,7 +177,6 @@ function Writepost() {
                 />
               </div>
             )}
-            
           </div>
         </div>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -185,9 +188,17 @@ function Writepost() {
             onChange={(e) => setContent(e.target.value)}
           />
         </Form.Group>
-        <button className="post" onClick={handlePost}>
-          โพสต์บล็อก
-        </button>
+        <div
+          className="btnallwp"
+          style={{ display: "flex", justifyContent: "flex-end" }}
+        >
+          <button className="post" onClick={handlePost}>
+            โพสต์บล็อก
+          </button>
+          <a href="/home" style={{ textDecoration: "none" }}>
+            <button className="cancel">Cancel</button>
+          </a>
+        </div>
       </div>
     </div>
   );

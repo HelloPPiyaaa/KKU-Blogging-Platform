@@ -1,0 +1,16 @@
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* เพิ่มเอฟเฟกต์เงาเมื่อเมาส์วางที่โพสต์ */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสีและเอฟเฟกต์เงา */
+}
+.card {
+  overflow: hidden; /* ป้องกันการขยายภาพเกินขอบของการ์ด */
+}
+
+.card:hover img {
+  transform: scale(1.05); /* ขยายขนาดรูปภาพเมื่อเมาส์วางที่การ์ด */
+  transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์การขยายขนาดด้วยการเปลี่ยนรูปภาพ */
+}
+.icon-save {
+  font-size: 25px;
+  margin-bottom: 6px;
+}
