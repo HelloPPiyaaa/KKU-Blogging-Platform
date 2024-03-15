@@ -1,19 +1,8 @@
-body,
-html {
-  height: 100%; /* ทำให้ความสูงของ body และ html เต็มหน้าจอ */
-  margin: 0; /* ลบ margin ที่เกิดจาก browser default */
-  padding: 0; /* ลบ padding ที่เกิดจาก browser default */
-  background: linear-gradient(
-    45deg,
-    #f1f1e7,
-    #fff7f9
-  ); /* กำหนดสีพื้นหลังเป็น gradient */
-}
 
 .wp {
   margin: 3% 25%;
   padding: 30px;
-  background-color: white;
+  background: linear-gradient(45deg, #f2f3ea, #e9d8dc);
   border-radius: 20px;
 }
 
