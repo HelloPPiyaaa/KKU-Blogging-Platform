@@ -1,39 +1,48 @@
 import "../misc/test.css";
-import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Toast from "react-bootstrap/Toast";
-import { MdCircleNotifications } from "react-icons/md";
+import Form from "react-bootstrap/Form";
+import { IoIosHelpCircle } from "react-icons/io";
+import Navbar1 from "../Navbar/Navbar";
+// import { FcNext } from "react-icons/fc";
+// import Button from "react-bootstrap/Button";
 
-function DismissibleExample() {
-  const [showA, setShowA] = useState(true);
-
-  const toggleShowA = () => setShowA(!showA);
-
+function TestPage() {
   return (
-    <Row>
-      <Col md={6} className="mb-2 not">
-        <Button onClick={toggleShowA} className="mb-2">
-          <a href="/" id="butno">
-            <MdCircleNotifications />
-          </a>
-        </Button>
-        <Toast show={showA} onClose={toggleShowA}>
-          <Toast.Header>
-            <img
-              src="holder.js/20x20?text=%20"
-              className="rounded me-2"
-              alt=""
+    <div className="help">
+      <div className="nav-help">
+        <Navbar1 />
+      </div>
+      <Form className="helptitle">
+        <div className="HeadSch">
+          <h2>ศูนย์ช่วยเหลือ</h2>
+          <h2>KKU Blogging Platform</h2>
+          <div className="search">
+            <input
+              type="text"
+              placeholder="ค้นหา..."
+              className="input-search"
             />
-            <strong className="me-auto">Bootstrap</strong>
-            <small>11 mins ago</small>
-          </Toast.Header>
-          <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
-        </Toast>
-      </Col>
-    </Row>
+            <button className="btnsearchhelp">ค้นหา</button>
+          </div>
+        </div>
+      </Form>
+      <div className="QT">
+        <p className="qtt">คำถามที่พบบ่อย</p>
+        <a href="" id="qthelp1">
+          <IoIosHelpCircle />
+          วิธีใช้ KKU Blogging Platform
+        </a>
+
+        <a href="" id="qthelp2">
+          <IoIosHelpCircle />
+          วิธีการเขียนและเผยแพร่บล็อกแรกของคุณ
+        </a>
+        <a href="" id="qthelp3">
+          <IoIosHelpCircle />
+          สามารถลบบัญชีผู้ใช้ได้อย่างไร
+        </a>
+      </div>
+    </div>
   );
 }
 
-export default DismissibleExample;
+export default TestPage;

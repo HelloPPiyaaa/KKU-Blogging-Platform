@@ -9,6 +9,11 @@ import Profile from "./Screens/profile";
 import EditProfile from "./Screens/edit-profille";
 import StartAdmin from "./Screens/Admin/startAdmin";
 import RegisterAdmin from "./Screens/Admin/adminRegister";
+import Writepost from "./Screens/post";
+import Content from "./Screens/Content";
+import LoginAdmin from "./Screens/Admin/adminLogin";
+import AdminHome from "./Screens/Admin/adminHome";
+import Feeds from "./Screens/Feeds";
 
 function App() {
   return (
@@ -22,9 +27,14 @@ function App() {
         <Route path="/test" element={<TestPage />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/profile/edit-profile/:id" element={<EditProfile />} />
+        <Route path="/writepost" element={<Writepost />} />
+        <Route path="/content/:id" element={<Content />} />
+        <Route path="/feeds" element={<Feeds />} />
 
         <Route path="/admin" element={<StartAdmin />} />
         <Route path="/admin/register" element={<RegisterAdmin />} />
+        <Route path="/admin/login" element={<LoginAdmin />} />
+        <Route path="/admin/:id" element={<AdminHome />} />
       </Routes>
     </Router>
   );

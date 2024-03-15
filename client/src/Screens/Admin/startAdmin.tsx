@@ -2,48 +2,8 @@ import { useState } from "react";
 import "../../misc/start.css";
 import cafeImage from "../../pic/start1.jpg";
 import foodImage from "../../pic/start2.jpg";
-import logostart from "../../pic/logo-footer.png";
 import { Link } from "react-router-dom";
-
-function Navbar() {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  return (
-    <nav id="navbar">
-      <div className="head1">
-        <img src={logostart} alt="" />
-      </div>
-      <div className="linka">
-        <Link to="login">เข้าสู่ระบบ</Link>
-        <a href="/register">สมัครใช้งาน</a>
-      </div>
-      <label
-        htmlFor="burger-checkbox"
-        className="burger-menu"
-        onClick={toggleMenu}
-      >
-        <div className="burger-icon">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
-        <input
-          type="checkbox"
-          id="burger-checkbox"
-          className="burger-checkbox"
-        />
-        <div className={`menu-links ${isActive ? "active" : ""}`}>
-          <Link to="login">เข้าสู่ระบบ</Link>
-          <Link to="regist">สมัครใช้งาน</Link>
-        </div>
-      </label>
-    </nav>
-  );
-}
+import Navbar from "../../Navbar/Navbar";
 
 function StartAdmin() {
   return (
@@ -51,8 +11,8 @@ function StartAdmin() {
       <Navbar />
       <div className="container">
         <h1>
-          เริ่มต้นใช้งานง่ายๆ <br />
-          เพื่อแบ่งปันความคิดของคุณ
+          ยินดีต้องรับผู้ดูแลระบบ <br />
+          KKU BLOGGING PLATFORM
         </h1>
       </div>
       <div className="imagestart">

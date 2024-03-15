@@ -13,3 +13,22 @@
   width: 45%;
   transform: translate(-50%, -50%);
 }
+.other {
+  position: absolute;
+  left: 95vw;
+  z-index: 10;
+}
+@media screen and (max-width: 960px) {
+  .other {
+    position: absolute;
+    left: 90vw;
+    z-index: 10;
+  }
+}
+@media screen and (max-width: 720px) {
+  .up {
+    position: absolute;
+    left: 85vw;
+    z-index: 10;
+  }
+}

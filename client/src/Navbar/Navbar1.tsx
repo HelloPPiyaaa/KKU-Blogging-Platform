@@ -1,24 +1,36 @@
 import "../Navbar/navbar1.css";
 import logoKKU from "../pic/logo-head.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import { IoIosSearch } from "react-icons/io";
-import { BsChatHeart } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
-import { FaUser } from "react-icons/fa6";
+import { PiUserCircleFill } from "react-icons/pi";
 import Dropdown from "react-bootstrap/Dropdown";
 import { IoMdSettings } from "react-icons/io";
 import { ImStatsBars } from "react-icons/im";
 import { IoIosHelpCircle } from "react-icons/io";
 import { IoIosLogOut } from "react-icons/io";
+import { Form } from "react-bootstrap";
+import { fetchUserProfile } from "../api/profile";
 
 const Navbar2 = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
+  const [userId, setUserId] = useState("");
+
+  useEffect(() => {
+    const storedUserId = localStorage.getItem("userId");
+    if (storedUserId) {
+      setUserId(storedUserId);
+    }
+  }, []);
 
   const handleDropdownChange = (eventKey: string | null) => {
     if (eventKey !== null) {
       setSelectedOption(eventKey);
+      if (eventKey === "option1") {
+        window.location.href = `/profile/${userId}`;
+      }
     }
   };
 
@@ -37,56 +49,66 @@ const Navbar2 = () => {
         <div className="navbar-center"></div>
 
         <div className="navbar-end">
-          <button className="icon-button">
-            <IoIosSearch />
-          </button>
-          <button className="icon-button">
-            <BsChatHeart />
-          </button>
-
+          <span>
+            <IoIosSearch className="icon-search" />
+            Search...
+          </span>
+          <Form.Control
+            type="text"
+            id="inputPassword5"
+            aria-describedby="passwordHelpBlock"
+            className="searchbox"
+            style={{
+              width: "200px",
+              height: "40px",
+              borderRadius: "15px",
+              border: "2px solid #808995",
+            }}
+          />
           <button className="icon-button">
             <IoMdNotifications />
           </button>
 
           <button className="icon-button " onClick={toggleDropdown}>
-            <FaUser />
-          </button>
-          <Dropdown
-            show={showDropdown}
-            onSelect={handleDropdownChange}
-            className="position-absolute z-3"
-            style={{
-              paddingTop: "2.8rem",
-              paddingLeft: "1rem",
-            }}
-          >
-            <Dropdown.Menu
+            <PiUserCircleFill />
+            <Dropdown
+              show={showDropdown}
+              onSelect={handleDropdownChange}
+              className="position-absolute z-3 top-0 translate-middle-x"
               style={{
-                background: "#433E49",
+                paddingTop: "3.8rem",
+                marginLeft: "3rem",
               }}
             >
-              <Dropdown.Item eventKey="option1">
-                <FaUser />
-                โปรไฟล์
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="option2">
-                <IoMdSettings />
-                ตั้งค่า
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="option3">
-                <ImStatsBars />
-                สถิติ
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="option4">
-                <IoIosHelpCircle />
-                ช่วยเหลือ
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="option5">
-                <IoIosLogOut />
-                ออกจากระบบ
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              <Dropdown.Menu
+                className="position-relative"
+                style={{
+                  background: "#433E49",
+                }}
+              >
+                <Dropdown.Item eventKey="option1">
+                  <PiUserCircleFill />
+                  โปรไฟล์
+                </Dropdown.Item>
+                <Dropdown.Item eventKey="option2">
+                  <IoMdSettings />
+                  ตั้งค่า
+                </Dropdown.Item>
+                <Dropdown.Item eventKey="option3">
+                  <ImStatsBars />
+                  สถิติ
+                </Dropdown.Item>
+                <Dropdown.Item eventKey="option4">
+                  <IoIosHelpCircle />
+                  ช่วยเหลือ
+                </Dropdown.Item>
+                <Dropdown.Item eventKey="option5">
+                  <IoIosLogOut />
+                  ออกจากระบบ
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </button>
         </div>
       </div>
 

@@ -5,6 +5,7 @@ import excercise from "../pic/excercise.jpeg";
 import social from "../pic/social.jpg";
 import Carousel from "react-bootstrap/Carousel";
 import "../misc/home.css";
+import { TbPlus } from "react-icons/tb";
 
 function HomePage() {
   return (
@@ -37,6 +38,11 @@ function HomePage() {
             </Carousel.Item>
           </Carousel>
         </div>
+      </div>
+      <div className="other">
+        <a href="#header" className="btn btn-dark rounded-circle">
+          <TbPlus />
+        </a>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 // RegisterForm.tsx
 import { useState } from "react";
-import { registerAdmin } from "../../api/adminRegister";
+import { registerAdmin } from "../../api/adminlogin-Regist";
 import "../../misc/register.css";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
@@ -8,47 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
-
-function Navbar() {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  return (
-    <nav id="navbar2">
-      <div className="head1">
-        <h1>K K U</h1>
-        <h2>BLOGGING PLATFORM</h2>
-      </div>
-      <div className="linka">
-        <a href="/login">เข้าสู่ระบบ</a>
-        <a href="/register">สมัครใช้งาน</a>
-      </div>
-      <label
-        htmlFor="burger-checkbox"
-        className="burger-menu"
-        onClick={toggleMenu}
-      >
-        <div className="burger-icon">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
-        <input
-          type="checkbox"
-          id="burger-checkbox"
-          className="burger-checkbox"
-        />
-        <div className={`menu-links ${isActive ? "active" : ""}`}>
-          <a href="/login">เข้าสู่ระบบ</a>
-          <a href="/register">สมัครใช้งาน</a>
-        </div>
-      </label>
-    </nav>
-  );
-}
+import NavbarV2 from "../../Navbar/NavbarV2";
 
 const RegisterAdmin: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -111,8 +71,8 @@ const RegisterAdmin: React.FC = () => {
 
   return (
     <div className="regispage ">
-      <Navbar />
-      <Container>
+      <NavbarV2 />
+      <Container className="mt-5">
         <Form className="Form1" onSubmit={handleSubmit}>
           <h3>สมัครใช้งาน</h3>
 

@@ -26,10 +26,15 @@ const registerRouter = require("./routes/register");
 const loginRouter = require("./routes/login");
 const profileRouter = require("./routes/profile");
 const AdminRegister = require("./routes/adminRegister");
+const postRouter = require("./routes/post");
+const AdminProfile = require("./routes/adminProfile");
 
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
 app.use("/profile", profileRouter);
+app.use("/posts", postRouter);
+
+app.use("/admin", AdminProfile);
 app.use("/admin/register", AdminRegister);
 
 app.listen(PORT, () => {

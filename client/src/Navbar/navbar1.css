@@ -7,7 +7,7 @@ button,
   border: 0;
 }
 button > svg {
-  font-size: 20px;
+  font-size: 25px;
 }
 .navbarreal {
   height: 18vh;
@@ -31,15 +31,27 @@ button > svg {
   object-fit: cover;
 }
 .navbar-end {
+  width: 100%;
   display: flex;
   gap: 6px;
-  flex: 0 0 178px;
+  flex: 0 0 120px;
 }
 .icon-button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: #e4e6e9;
+}
+.navbar-end > span {
+  display: flex;
+  position: absolute;
+  top: 32%;
+  transform: translateX(0.5em);
+  color: #606770;
+}
+.navbar-end > span > .icon-search {
+  width: 25px;
+  height: 25px;
 }
 a.dropdown-item {
   color: white;
@@ -88,4 +100,14 @@ a.dropdown-item {
 .dropdown-item a {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .searchbox {
+    margin-right: 8%;
+  }
+  .up {
+    position: absolute;
+    left: 85vw;
+    z-index: 10;
+  }
 }

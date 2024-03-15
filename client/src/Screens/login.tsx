@@ -17,7 +17,7 @@ import { Row, Col } from "react-bootstrap";
 import { FaCheckCircle } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
 import Influe from "../pic/Influencer.png";
-import Navbar1 from "../Navbar/Navbar";
+import Navbar from "../Navbar/NavbarV2";
 
 const Login: React.FC = () => {
   const [tel] = useState("");
@@ -50,7 +50,7 @@ const Login: React.FC = () => {
         const user = {
           username: profile.getName(),
           email: profile.getEmail(),
-          password: profile.getId(), // ใช้ Google ID เป็น password ชั่วคราว
+          password: profile.getId(),
           tel,
           firstname,
           lastname,
@@ -159,7 +159,7 @@ const Login: React.FC = () => {
 
   return (
     <div className="login-container my-5">
-      <Navbar1 />
+      <Navbar />
       <div className="login-content">
         <div className="user-details">
           <Image
@@ -259,13 +259,6 @@ const Login: React.FC = () => {
                   </button>
                 )}
               />
-              <a
-                href="/"
-                className="d-flex text-center justify-content-center mt-2 fw-bold"
-                style={{ color: "#928590", fontSize: "13px" }}
-              >
-                เข้าสู่ระบบ Admin
-              </a>
             </Col>
           </Row>
         </div>

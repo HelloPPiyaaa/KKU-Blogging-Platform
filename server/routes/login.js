@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
     const user = await User.findOne({ email, password });
 
     if (user) {
-      res.json({ success: true, message: "Login successful!" });
+      res.json({ success: true, id: User._id, message: "Login successful!" });
     } else {
       res.json({ success: false, message: "Invalid email or password." });
     }

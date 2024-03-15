@@ -29,6 +29,13 @@ const loginUser = async (email: any, password: any): Promise<any> => {
 
     // Handle JSON response
     const responseData = await response.json();
+    if (responseData.id) {
+      window.location.href = `/profile/${responseData.id}`;
+
+      localStorage.setItem("profileId", responseData.id);
+    } else {
+      console.error("Response does not contain ID:", responseData);
+    }
     return responseData;
   } catch (error: any) {
     console.error("Error:", (error as Error).message);
