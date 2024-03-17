@@ -16,47 +16,8 @@ import { BiLogoFacebookSquare } from "react-icons/bi";
 import GoogleLogin from "react-google-login";
 import { gapi } from "gapi-script";
 import { FcGoogle } from "react-icons/fc";
+import Navbar from "../Navbar/NavbarV2";
 
-function Navbar() {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  return (
-    <nav id="navbar2">
-      <div className="head1">
-        <h1>K K U</h1>
-        <h2>BLOGGING PLATFORM</h2>
-      </div>
-      <div className="linka">
-        <a href="/login">เข้าสู่ระบบ</a>
-        <a href="/register">สมัครใช้งาน</a>
-      </div>
-      <label
-        htmlFor="burger-checkbox"
-        className="burger-menu"
-        onClick={toggleMenu}
-      >
-        <div className="burger-icon">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
-        <input
-          type="checkbox"
-          id="burger-checkbox"
-          className="burger-checkbox"
-        />
-        <div className={`menu-links ${isActive ? "active" : ""}`}>
-          <a href="/login">เข้าสู่ระบบ</a>
-          <a href="/register">สมัครใช้งาน</a>
-        </div>
-      </label>
-    </nav>
-  );
-}
 
 const RegisterForm: React.FC = () => {
   const [username, setUsername] = useState("");

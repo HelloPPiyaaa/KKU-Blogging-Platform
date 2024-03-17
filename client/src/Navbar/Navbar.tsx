@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logostart from "../pic/logo-footer.png";
+import logoKKU2 from "../pic/K.png";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 function Navbar() {
@@ -12,15 +12,7 @@ function Navbar() {
   return (
     <nav id="navbar">
       <div className="head1">
-        <img
-          src={logostart}
-          alt=""
-          style={{
-            width: "200px",
-            height: "auto",
-            objectFit: "cover",
-          }}
-        />
+      <a href="/home"><img className="navbar-logo" src={logoKKU2} alt="logo" /></a>
       </div>
       <div className="linka">
         <Link to="login">เข้าสู่ระบบ</Link>
