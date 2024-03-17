@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logoKKU2 from "../pic/K.png";
+import logoKKU2 from "../pic/logowhite.png";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 function Navbar() {

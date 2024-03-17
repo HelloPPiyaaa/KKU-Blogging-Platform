@@ -20,6 +20,7 @@ import Setting3 from './Screens/setting3';
 import Sidebar from './Screens/sidebar';
 import Settingtest from './Screens/settingtest';
 import Category from './Screens/category';
+import Footer from './Navbar/footer';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path='/setting3' element={<Setting3 />} />
         <Route path='/sidebar' element={<Sidebar />} />
         <Route path='/st' element={<Settingtest />} />
+        <Route path='/footer' element={<Footer />} />
         <Route path="/content/:id" element={<Content />} />
         <Route path="/feeds" element={<Feeds />} />
         <Route path="/category" element={<Category />} />

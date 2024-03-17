@@ -6,6 +6,7 @@ import social from "../pic/social.jpg";
 import Carousel from "react-bootstrap/Carousel";
 import "../misc/home.css";
 import Feeds from "../Screens/Feeds";
+import Footer from "../Navbar/footer";
 import { TbPlus } from "react-icons/tb";
 
 function HomePage() {
@@ -46,6 +47,8 @@ function HomePage() {
         </a>
       </div>
       <Feeds/>
+      <Footer/>
+      
     </div>
   );
 }
