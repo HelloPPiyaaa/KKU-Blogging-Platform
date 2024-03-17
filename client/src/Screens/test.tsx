@@ -1,7 +1,7 @@
 import "../misc/test.css";
 import Form from "react-bootstrap/Form";
 import { IoIosHelpCircle } from "react-icons/io";
-import Navbar1 from "../Navbar/Navbar";
+import Navbar2 from "../Navbar/Navbar1";
 // import { FcNext } from "react-icons/fc";
 // import Button from "react-bootstrap/Button";
 
@@ -9,7 +9,7 @@ function TestPage() {
   return (
     <div className="help">
       <div className="nav-help">
-        <Navbar1 />
+        <Navbar2 />
       </div>
       <Form className="helptitle">
         <div className="HeadSch">

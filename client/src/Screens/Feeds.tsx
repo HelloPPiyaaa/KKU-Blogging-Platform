@@ -9,10 +9,13 @@ import { LuHeart } from "react-icons/lu";
 import { FaRegComment } from "react-icons/fa";
 import { MdOutlineBookmarkBorder } from "react-icons/md";
 import "../misc/feeds.css";
+import { TfiMoreAlt } from "react-icons/tfi";
+import { Dropdown, Button } from "react-bootstrap";
 
 const Feeds = () => {
   const navigate = useNavigate();
   const [feeds, setFeeds] = useState<Post[] | null>(null);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -42,13 +45,23 @@ const Feeds = () => {
                 className="col m-2 d-flex justify-content-center align-items-stretch"
               >
                 <Card
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", position: "relative" }}
                   onClick={() => handleClickCard(feed._id)}
                 >
                   <Card.Img
                     variant="top"
                     src={feed.image}
                     style={{ objectFit: "cover", height: "200px" }} // ตั้งค่าขนาดของรูปและการปรับเนื้อหา
+                  />
+                  <TfiMoreAlt
+                    style={{
+                      position: "absolute",
+                      top: "10px",
+                      right: "10px",
+                      fontSize: "25px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setShowDropdown(!showDropdown)}
                   />
                   <Card.Body>
                     <Card.Title
@@ -102,17 +115,17 @@ const Feeds = () => {
                     {/* Like */}
                     <div className="btn-action">
                       <div className="icon-like">
-                      <LuHeart />
+                        <LuHeart />
                       </div>
                       <p className="likecount">254</p>
                       <div className="icon-cm">
                         <FaRegComment />
                       </div>
                       <p className="commentcount">42</p>
-                      
+
                       <div className="save">
                         <div className="icon-save">
-                        <MdOutlineBookmarkBorder />
+                          <MdOutlineBookmarkBorder />
                         </div>
                       </div>
                     </div>
@@ -122,6 +135,25 @@ const Feeds = () => {
             </Col>
           ))}
       </Row>
+      {showDropdown && (
+        <Dropdown
+          style={{
+            position: "absolute",
+            top: "50px",
+            right: "10px",
+          }}
+          show={showDropdown}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Dropdown.Menu>
+            <Dropdown.Item >แก้ไขโพสต์</Dropdown.Item>
+            <Dropdown.Item >ลบโพสต์</Dropdown.Item>
+            <Dropdown.Item >
+              ตั้งค่าความเป็นส่วนตัว
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      )}
     </div>
   );
 };

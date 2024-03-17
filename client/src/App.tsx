@@ -19,6 +19,7 @@ import Setting2 from './Screens/setting2';
 import Setting3 from './Screens/setting3';
 import Sidebar from './Screens/sidebar';
 import Settingtest from './Screens/settingtest';
+import Category from './Screens/category';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path='/st' element={<Settingtest />} />
         <Route path="/content/:id" element={<Content />} />
         <Route path="/feeds" element={<Feeds />} />
+        <Route path="/category" element={<Category />} />
         <Route path="/admin" element={<StartAdmin />} />
         <Route path="/admin/register" element={<RegisterAdmin />} />
         <Route path="/admin/login" element={<LoginAdmin />} />
