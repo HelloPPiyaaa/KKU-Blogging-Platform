@@ -43,8 +43,14 @@ const Navbar2 = () => {
       <div className="navbarhead">
         <div className="navbar-badge">20+</div>
         <div className="navbar-end">
-          <a href="/home"><img className="navbar-logo" src={logoKKU} alt="logo" /></a>
-          
+          <a href="/home">
+            <img
+              className="navbar-logo"
+              src={logoKKU}
+              alt="logo"
+             
+            />
+          </a>
         </div>
 
         <div className="navbar-center"></div>
