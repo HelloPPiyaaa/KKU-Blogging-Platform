@@ -19,6 +19,7 @@ footer {
   margin-top: auto;
   background-color: #433e49;
   padding: 60px 10%;
+  justify-content: center;
 }
 
 ul {
@@ -27,6 +28,7 @@ ul {
 
 .footer-col {
   width: 25%;
+  margin: 0 40px;
 }
 
 .footer-col h4 {
@@ -38,16 +40,6 @@ ul {
   text-transform: capitalize;
 }
 
-.footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  background-color: #f3e8eb;
-  height: 3px;
-  width: 70px;
-}
-
 ul li:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -56,7 +48,7 @@ ul li a {
   display: block;
   font-size: 19px;
   text-transform: capitalize;
-  color: #bdb6b6;
+  color: white;
   text-decoration: none;
   transition: 0.4s;
 }
@@ -87,6 +79,11 @@ ul li a:hover {
   color: white;
   font-size: 35px;
   margin-right: 10px;
+}
+
+.footer-col h4 {
+  width: 200px; /* ปรับขนาดความกว้างตามต้องการ */
+  height: auto; /* รักษาอัตราส่วนของรูปภาพ */
 }
 @media (max-width: 740px) {
   .footer-col {
