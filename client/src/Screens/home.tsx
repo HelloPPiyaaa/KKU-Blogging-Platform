@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "../misc/home.css";
 import Navbar2 from "../Navbar/Navbar1";
 import thaifood from "../pic/thaifood.jpeg";
@@ -10,6 +11,17 @@ import Footer from "../Navbar/footer";
 import { TbPlus } from "react-icons/tb";
 
 function HomePage() {
+  const [isFollowing, setIsFollowing] = useState(false);
+  const [isFollowing2, setIsFollowing2] = useState(false);
+
+  const handleFollowButtonClick = () => {
+    setIsFollowing(!isFollowing);
+  };
+
+  const handleFollowButtonClick2 = () => {
+    setIsFollowing2(!isFollowing2);
+  };
+
   return (
     <div className="home">
       <Navbar2 />
@@ -46,9 +58,50 @@ function HomePage() {
           <TbPlus />
         </a>
       </div>
-      <Feeds/>
-      <Footer/>
-      
+      <div className="categ-home">
+        <h4>หมวดหมู่เป็นที่นิยม</h4>
+
+        <div className="categ-popular">
+          <div className="content-wrapper">
+            <div className="text-button-wrapper">
+              <div className="left-con">
+                <h4 className="count-categ">1</h4>
+                <p className="topic-categ-home">ข่าวสาร</p>
+                <p className="left-text">
+                  ผู้ติดตามจำนวน 684 คน จำนวน 356 โพสต์
+                </p>
+              </div>
+              <button className="right-button" onClick={handleFollowButtonClick}>
+                  {isFollowing ? "กำลังติดตาม" : "ติดตาม"}
+                </button>
+            </div>
+          </div>
+        </div>
+        <div className="categ-popular">
+          <div className="content-wrapper">
+            <div className="text-button-wrapper">
+              <div className="left-con">
+                <h4>2</h4>
+                <p className="topic-categ-home">คาเฟ่</p>
+                <p className="left-text">
+                  ผู้ติดตามจำนวน 564 คน จำนวน 349 โพสต์
+                </p>
+              </div>
+              <div className="right-con">
+                <button className="right-button" onClick={handleFollowButtonClick2}>
+                  {isFollowing2 ? "กำลังติดตาม" : "ติดตาม"}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div className="feeds-home">
+        {" "}
+        <p className="allpost-home">โพสต์ทั้งหมด</p>
+        <Feeds />
+      </div>
     </div>
   );
 }

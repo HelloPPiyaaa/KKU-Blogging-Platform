@@ -31,4 +31,98 @@
     left: 85vw;
     z-index: 10;
   }
+  .feeds-home{
+    margin-left: 20%;
+  }
+}
+
+.categ-home {
+  margin: 1% 6%;
+  background-color: #433e49;
+  padding: 40px;
+  border-radius: 15px;
+}
+.categ-home h4 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+.categ-popular {
+  border-bottom: #fff 1px solid;
+  color: #fff;
+}
+
+.allpost-home {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 50px;
+  margin-left: 85px;
+}
+
+.topic-categ-home {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.left-text {
+  margin-top: 10px;
+}
+.categ-popular {
+  display: flex;
+  align-items: center;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+.text-button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.topic-categ-home,
+.left-text {
+  margin-right: 10px;
+  padding: 20px;
+}
+
+.categ-popular {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.text-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-con {
+  display: flex;
+  flex-direction: row; /* จัดให้เป็นแนวนอน */
+  align-items: center; /* จัดให้เนื้อหาอยู่กึ่งกลางตามแนวดิ่ง */
+}
+
+.left-con p {
+  margin: 0; /* เอาช่องว่างของประโยคออก */
+}
+
+.right-con {
+  display: flex;
+  align-items: center;
+}
+
+.right-button {
+  padding: 10px;
+  color: #433e49;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.count-categ {
+  margin-top: 10px;
+  font-weight: bold;
 }
